@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test:1": "node ./exo_1/index.spec.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:2": "node ./exo_2/index.spec.js"
   },
   "repository": {
     "type": "git",

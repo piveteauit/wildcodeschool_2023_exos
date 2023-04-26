@@ -3,8 +3,6 @@ const assert = require("assert");
 
 const versions = ["_v1", "_v2", "_v3"]
 
-console.log(WCSMath)
-
 const PARAMS_FN_TESTS = [
   [10, 3],
   [8, 3],
