@@ -1,0 +1,24 @@
+{
+  "name": "wildcodeschool_2023_exos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:1": "node ./exo_1/index.spec.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piveteauit/wildcodeschool_2023_exos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/piveteauit/wildcodeschool_2023_exos/issues"
+  },
+  "homepage": "https://github.com/piveteauit/wildcodeschool_2023_exos#readme",
+  "dependencies": {
+    "assert": "^2.0.0"
+  }
+}
