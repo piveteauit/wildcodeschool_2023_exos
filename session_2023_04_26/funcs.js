@@ -1,23 +1,67 @@
-// Je veux une fonction qui prend un nombre en paramètre
-// et qui me retourne ce nombre multiplié 2
 
-// Déclaration de variables
-// [const|let|var] [nom] [assignation] [valeur]
-// const          obj     =            2 / "c" [] / function
 
-const multiplyV1 = (n)=>{
-  return n*2
+const axios  = {
+  get: (url) => new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (url === 'err') return reject({code: 500})
+      return resolve({
+        data: [
+          {id: 1, nom: "TOTO"},
+          {id: 2, nom: "TATA"},
+          {id: 3, nom: "TITI"}
+        ],
+        untasdechose: {}
+      });
+    }, 1_000)
+  })
 }
 
-console.log(multiplyV1(2));
-
-
-const multiplyV2 = (a) => a*2
-
-console.log(multiplyV2(4));
-
-function multiplyV3(num)  {
-  return num*2
+function maCallback(monSuperParams) {
+  monState = monSuperParams
+  console.log("Dans le then: ", monState)
 }
 
-console.log(multiplyV3(6));
+function monHook() {
+  console.log("Before ---> ", 0)
+
+
+  console.log(axios.get('http://qqch.com'))
+
+  // II: Objet
+const sampleObject = {
+  name: "toto",
+  surname: "tata"
+};
+const {surname} = sampleObject;  // Ceci revient au même que: 
+                                // const surname = sampleObject.surname;
+  axios.get('err')
+    .then(({data}) => console.log('---',  data))
+    .catch(console.log)
+
+  console.log("After ---> ", 1)
+}
+
+
+
+
+const toto = [
+  {id: 1, nom: "TOTO"},
+  {id: 2, nom: "TATA"}, /// === element
+  {id: 3, nom: "TITI"}
+]
+
+function print(monParam) {
+  console.log(monParam)
+}
+
+
+function incrementId(user) {
+  console.log('-----', toto)
+  user.id += 1
+}
+
+toto.forEach(incrementId)
+
+
+
+monHook();
